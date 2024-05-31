@@ -5,9 +5,9 @@ from flask import request, session
 # Create a connection pool
 
 db_pool = pool.SimpleConnectionPool(10, 100, 
-                                    database="chatapp",
-                                    user="postgres", password="admin", 
-                                    host="localhost", 
+                                    database="chatapp_3vsf",
+                                    user="vavo", password="oj6qRXwhFbG2GHxSROIAa0OdSrhvzho9", 
+                                    host="postgres://vavo:oj6qRXwhFbG2GHxSROIAa0OdSrhvzho9@dpg-cpd46hn79t8c73djcv2g-a/chatapp_3vsf", 
                                     port="5432")
 
 def create_table():
