@@ -16,7 +16,7 @@ CORS(app)
 app.secret_key = "hello"
 app.config['SECRET_KEY'] = "secret_key"
 app.permanent_session_lifetime = timedelta(minutes=1000)
-socketio = SocketIO(app, cors_allowed_origins="*", allow_unsafe_werkzeug=True)
+socketio = SocketIO(app, cors_allowed_origins="*")
 oauth = OAuth(app)
 
 
@@ -414,4 +414,4 @@ def deleteUser():
 
 if __name__ == '__main__':
     app.debug = True
-    socketio.run(app)
+    socketio.run(app, allow_unsafe_werkzeug=True)
