@@ -413,5 +413,5 @@ def deleteUser():
 
 
 if __name__ == '__main__':
-    app.debug = True
+    app.debug = False
     socketio.run(app, allow_unsafe_werkzeug=True)
