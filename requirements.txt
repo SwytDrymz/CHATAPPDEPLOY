@@ -25,3 +25,5 @@ simple-websocket==1.0.0
 urllib3==2.2.1
 Werkzeug==2.2.2
 wsproto==1.2.0
+packaging==24.0
+gunicorn==22.0.0
