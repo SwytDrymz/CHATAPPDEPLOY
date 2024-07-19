@@ -1,14 +1,22 @@
 import psycopg2
 from psycopg2 import pool
 from flask import request, session
+import os
 
 # Create a connection pool
 
+# Získání hodnoty environment variable
+DATABASE_URL = os.getenv('POSTGRES_URL')
+
+# Vytvoření connection pool
 db_pool = pool.SimpleConnectionPool(10, 100, 
-                                    database="chatapp_3vsf",
-                                    user="vavo", password="oj6qRXwhFbG2GHxSROIAa0OdSrhvzho9", 
-                                    host="dpg-cpd46hn79t8c73djcv2g-a", 
+                                    database="verceldb",
+                                    user="default", password="hqVTR2rP5Wwe", 
+                                    host="ep-soft-wave-a22ctp85-pooler.eu-central-1.aws.neon.tech", 
                                     port="5432")
+
+
+
 
 def create_table():
     with db_pool.getconn() as conn:

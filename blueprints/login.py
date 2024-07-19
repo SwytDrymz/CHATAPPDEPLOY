@@ -5,9 +5,6 @@ from .home import home_bp
 import hashlib
 import random
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 login_bp = Blueprint('login_bp', __name__)
 

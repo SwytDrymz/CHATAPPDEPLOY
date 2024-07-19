@@ -1,4 +1,4 @@
-const socket = io()
+const socket = io("https://chatapp-three-orpin.vercel.app")
 
 let iconID = -1
 
