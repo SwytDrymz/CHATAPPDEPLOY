@@ -1,4 +1,6 @@
-const socket = io("https://chatappdeploy-aqye.onrender.com")
+const socket = io('https://chatappdeploy-aqye.onrender.com', {
+    transports: ['websocket']  // Použití WebSocket transportu
+});
 
 let iconID = -1
 
