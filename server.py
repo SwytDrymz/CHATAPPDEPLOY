@@ -17,7 +17,7 @@ CORS(app)
 app.secret_key = "hello"
 app.config['SECRET_KEY'] = "secret_key"
 app.permanent_session_lifetime = timedelta(minutes=1000)
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode='eventlet')
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode='gevent')
 oauth = OAuth(app)
 
 apikey = "AIzaSyD9dtmNxdz3s08mpyWaiNlmR0ZofiaAjKo"
